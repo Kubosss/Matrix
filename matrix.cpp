@@ -11,10 +11,24 @@ matrix::matrix(int n) : n(n), allocated_n(n) {
     }
 }
 
+matrix::matrix(int n, int* t) : n(n), allocated_n(n) {
+    macierz_ptr = std::make_unique<int[]>(n * n);
+    for (int i = 0; i < n * n; ++i) {
+        macierz_ptr[i] = t[i];
+    }
+}
+
+matrix::matrix(const matrix& m) : n(m.n), allocated_n(m.allocated_n) {
+    macierz_ptr = std::make_unique<int[]>(n * n);
+    for (int i = 0; i < n * n; ++i) {
+        macierz_ptr[i] = m.macierz_ptr[i];
+    }
+}
+
 matrix::~matrix(void) {}
 
 int& matrix::at(int x, int y) {
-    if (x >= n || y >= n)
+    if (x >= n || y >= n || x < 0 || y < 0)
         throw std::logic_error("Zle wspolrzedne macierzy");
     return macierz_ptr[x * n + y];
 }
@@ -58,22 +72,6 @@ std::ostream& operator<<(std::ostream& o, const matrix& m) {
         o << "\n";
     }
     return o;
-}
-
-matrix operator+(const matrix& m1, const matrix& m2) {
-    matrix wynik(m1.n);
-    for (int i = 0; i < m1.n * m1.n; ++i) {
-        wynik.macierz_ptr[i] = m1.macierz_ptr[i] + m2.macierz_ptr[i];
-    }
-    return wynik;
-}
-
-matrix operator+(int a, const matrix& m) {
-    matrix wynik(m.n);
-    for (int i = 0; i < m.n * m.n; ++i) {
-        wynik.macierz_ptr[i] = a + m.macierz_ptr[i];
-    }
-    return wynik;
 }
 
 matrix& matrix::operator+=(int a) {
@@ -177,4 +175,141 @@ matrix& matrix::nad_przekatna(void) {
         }
     }
     return *this;
+}
+
+matrix& matrix::alokuj(int rozmiar) {
+    if (rozmiar <= 0) {
+        throw std::logic_error("Rozmiar musi byc dodatni");
+    }
+    
+    if (allocated_n == 0) {
+        allocated_n = rozmiar;
+        n = rozmiar;
+        macierz_ptr = std::make_unique<int[]>(rozmiar * rozmiar);
+        for (int i = 0; i < rozmiar * rozmiar; ++i) {
+            macierz_ptr[i] = 0;
+        }
+    } else if (allocated_n < rozmiar) {
+        allocated_n = rozmiar;
+        n = rozmiar;
+        macierz_ptr = std::make_unique<int[]>(rozmiar * rozmiar);
+        for (int i = 0; i < rozmiar * rozmiar; ++i) {
+            macierz_ptr[i] = 0;
+        }
+    }
+    
+    return *this;
+}
+
+matrix matrix::operator--(int) {
+    matrix temp(n);
+    for (int i = 0; i < n * n; ++i) {
+        temp.macierz_ptr[i] = macierz_ptr[i];
+        macierz_ptr[i]--;
+    }
+    return temp;
+}
+
+matrix& matrix::operator()(double d) {
+    int wartosc = static_cast<int>(d);
+    for (int i = 0; i < n * n; ++i) {
+        macierz_ptr[i] += wartosc;
+    }
+    return *this;
+}
+
+bool matrix::operator==(const matrix& m) const {
+    if (n != m.n) return false;
+    for (int i = 0; i < n * n; ++i) {
+        if (macierz_ptr[i] != m.macierz_ptr[i]) return false;
+    }
+    return true;
+}
+
+bool matrix::operator>(const matrix& m) const {
+    if (n != m.n) return false;
+    for (int i = 0; i < n * n; ++i) {
+        if (macierz_ptr[i] <= m.macierz_ptr[i]) return false;
+    }
+    return true;
+}
+
+bool matrix::operator<(const matrix& m) const {
+    if (n != m.n) return false;
+    for (int i = 0; i < n * n; ++i) {
+        if (macierz_ptr[i] >= m.macierz_ptr[i]) return false;
+    }
+    return true;
+}
+
+matrix operator+(const matrix& m1, const matrix& m2) {
+    if (m1.n != m2.n) {
+        throw std::logic_error("Macierze muszą mieć ten sam rozmiar do dodawania");
+    }
+    matrix wynik(m1.n);
+    for (int i = 0; i < m1.n * m1.n; ++i) {
+        wynik.macierz_ptr[i] = m1.macierz_ptr[i] + m2.macierz_ptr[i];
+    }
+    return wynik;
+}
+
+matrix operator*(const matrix& m1, const matrix& m2) {
+    if (m1.n != m2.n) {
+        throw std::logic_error("Macierze muszą mieć ten sam rozmiar do mnożenia");
+    }
+    matrix wynik(m1.n);
+    for (int i = 0; i < m1.n; ++i) {
+        for (int j = 0; j < m1.n; ++j) {
+            int suma = 0;
+            for (int k = 0; k < m1.n; ++k) {
+                suma += m1.at(i, k) * m2.at(k, j);
+            }
+            wynik.at(i, j) = suma;
+        }
+    }
+    return wynik;
+}
+
+matrix operator+(const matrix& m, int a) {
+    matrix wynik(m.n);
+    for (int i = 0; i < m.n * m.n; ++i) {
+        wynik.macierz_ptr[i] = m.macierz_ptr[i] + a;
+    }
+    return wynik;
+}
+
+matrix operator+(int a, const matrix& m) {
+    matrix wynik(m.n);
+    for (int i = 0; i < m.n * m.n; ++i) {
+        wynik.macierz_ptr[i] = a + m.macierz_ptr[i];
+    }
+    return wynik;
+}
+
+matrix operator*(const matrix& m, int a) {
+    matrix wynik(m.n);
+    for (int i = 0; i < m.n * m.n; ++i) {
+        wynik.macierz_ptr[i] = m.macierz_ptr[i] * a;
+    }
+    return wynik;
+}
+
+matrix operator*(int a, const matrix& m) {
+    return m * a;
+}
+
+matrix operator-(const matrix& m, int a) {
+    matrix wynik(m.n);
+    for (int i = 0; i < m.n * m.n; ++i) {
+        wynik.macierz_ptr[i] = m.macierz_ptr[i] - a;
+    }
+    return wynik;
+}
+
+matrix operator-(int a, const matrix& m) {
+    matrix wynik(m.n);
+    for (int i = 0; i < m.n * m.n; ++i) {
+        wynik.macierz_ptr[i] = a - m.macierz_ptr[i];
+    }
+    return wynik;
 }
