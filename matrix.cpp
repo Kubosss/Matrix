@@ -16,7 +16,7 @@ matrix::~matrix(void) {}
 
 int& matrix::at(int x, int y) {
     if (x < 0 || x >= n || y < 0 || y >= n) 
-        throw std::out_of_range("Osoba 1: Indeks poza zakresem!");
+        throw std::out_of_range("Indeks poza zakresem!");
     return data[x * n + y];
 }
 
