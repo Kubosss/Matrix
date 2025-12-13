@@ -4,8 +4,24 @@
 using namespace std;
 
 int main() {
+    cout << "=== TESTY WZOROW I LOSOWANIA ===" << endl;
+
+    try {
+        matrix m_szach(8);
+        m_szach.szachownica();
+
+        cout << "Szachownica:" << endl;
+        cout << m_szach << endl;
+
+        m_szach.losuj();
+        cout << "Po losowaniu:" << endl;
+        cout << m_szach << endl;
+
+    }
+    catch (exception& e) {
+        cout << "Blad: " << e.what();
     
-    cout << "=== TESTY MODULU PODSTAWOWEGO (OSOBA 1) ===" << endl;
+    cout << "=== TESTY MODULU PODSTAWOWEGO ===" << endl;
     
     try {
         matrix m1(5);
