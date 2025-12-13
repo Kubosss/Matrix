@@ -1,43 +1,36 @@
 #include "matrix.h"
 
-
-
-matrix::matrix(void) : data(nullptr), n(0), allocated_n(0) {}
-
-matrix::matrix(int size) : n(size), allocated_n(size) {
-    if (size > 0) {
-        data = std::make_unique<int[]>(size * size);
-        std::fill(data.get(), data.get() + size * size, 0);
-    }
-}
-
-matrix::~matrix(void) {}
-
-
 int& matrix::at(int x, int y) {
-    if (x < 0 || x >= n || y < 0 || y >= n) 
-        throw std::out_of_range("Indeks poza zakresem!");
-    return data[x * n + y];
+    if (x >= n || y >= n)
+        throw std::logic_error("Zle wspolrzedne macierzy");
+    return macierz_ptr[x * n + y];
 }
 
 const int& matrix::at(int x, int y) const {
-    return data[x * n + y];
+    return macierz_ptr[x * n + y];
 }
 
-matrix& matrix::alokuj(int new_n) {
-    
-    n = new_n;
-    data = std::make_unique<int[]>(n * n);
+matrix& matrix::losuj(void) {
+    std::srand(time(NULL));
+    for (int i = 0; i < n * n; ++i) {
+        macierz_ptr[i] = std::rand() % 10;
+    }
     return *this;
 }
 
-matrix& matrix::wstaw(int x, int y, int wartosc) {
-    at(x, y) = wartosc;
+matrix& matrix::szachownica(void) {
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            at(i, j) = ((i + j) % 2 != 0) ? 1 : 0;
+        }
+    }
     return *this;
 }
 
-matrix matrix::operator+(const matrix& m) const {
-    matrix result(n);
-    for (int i = 0; i < n * n; ++i) result.data[i] = data[i] + m.data[i];
-    return result; 
+std::ostream& operator<<(std::ostream& o, const matrix& m) {
+    for (int i = 0; i < m.n; ++i) {
+        for (int j = 0; j < m.n; ++j) o << m.at(i, j) << " ";
+        o << "\n";
+    }
+    return o;
 }
