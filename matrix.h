@@ -9,17 +9,19 @@
 
 class matrix {
 private:
-    std::unique_ptr<int[]> macierz_ptr;
     int n;
     int allocated_n;
-
-    int& at(int x, int y);
-    const int& at(int x, int y) const;
+    std::unique_ptr<int[]> macierz_ptr;
 
 public:
     matrix(void);
     matrix(int n);
+    matrix(const matrix& other) = delete;
+    matrix(matrix&& other) noexcept = default;
     ~matrix(void);
+
+    int& at(int x, int y);
+    const int& at(int x, int y) const;
 
     matrix& odwroc(void);
     matrix& losuj(void);
@@ -40,8 +42,11 @@ public:
     matrix& operator*=(int a);
     matrix operator++(int);
 
+    friend matrix operator+(const matrix& m1, const matrix& m2);
     friend matrix operator+(int a, const matrix& m);
     friend std::ostream& operator<<(std::ostream& o, const matrix& m);
+
+    void wstaw(int x, int y, int val) { at(x, y) = val; }
 
     int getSize() const { return n; }
 };

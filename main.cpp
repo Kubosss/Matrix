@@ -20,7 +20,7 @@ int main() {
     }
     catch (exception& e) {
         cout << "Blad: " << e.what();
-    
+    }
     cout << "=== TESTY MODULU PODSTAWOWEGO ===" << endl;
     
     try {
@@ -31,7 +31,8 @@ int main() {
         m2.wstaw(0, 0, 50);
         
         cout << "Wynik dodawania m1 + m2:" << endl;
-        
+        matrix m3 = m1 + m2;
+        cout << m3 << endl;
 
     } catch(exception& e) {
         cout << e.what();
