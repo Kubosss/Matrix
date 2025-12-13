@@ -3,9 +3,8 @@
 
 #include <iostream>
 #include <memory>
-#include <vector>
 #include <random>
-#include <iomanip>
+#include <stdexcept>
 
 class matrix {
 private:
@@ -13,24 +12,31 @@ private:
     int allocated_n;
     std::unique_ptr<int[]> macierz_ptr;
 
+    int idx(int x, int y) const { return x * n + y; }
+
 public:
-    // Konstruktory
+    /* ================== KONSTRUKTORY ================== */
     matrix(void);
     matrix(int n);
     matrix(int n, int* t);
-    matrix(const matrix& m);
-    matrix(matrix&& other) noexcept = default;
+    matrix(const matrix& m);           // konstruktor kopiujący
+    matrix(matrix&& m) noexcept = default; // konstruktor przenoszący
     ~matrix(void);
 
-    // Metody dostępowe
-    int& at(int x, int y);
-    const int& at(int x, int y) const;
-    int pokaz(int x, int y) const { return at(x, y); }
-    
-    // Alokacja
+    /* ================== OPERATOR PRZYPISANIA ================== */
+    matrix& operator=(const matrix& m); // operator przypisania kopiującego
+    matrix& operator=(matrix&& m) noexcept = default; // operator przypisania przenoszącego
+
+    /* ================== ALOKACJA ================== */
     matrix& alokuj(int n);
 
-    // Metody transformacji macierzy
+    /* ================== DOSTĘP ================== */
+    int& at(int x, int y);
+    const int& at(int x, int y) const;
+    int pokaz(int x, int y);
+    matrix& wstaw(int x, int y, int v);
+
+    /* ================== WZORY ================== */
     matrix& odwroc(void);
     matrix& losuj(void);
     matrix& losuj(int x);
@@ -45,32 +51,35 @@ public:
     matrix& nad_przekatna(void);
     matrix& szachownica(void);
 
-    // Operatory arytmetyczne ze skalarami
+    /* ================== OPERATORY MACIERZY ================== */
+    matrix operator+(matrix& m);
+    matrix operator*(matrix& m);
+
+    /* ================== OPERATORY INT ================== */
+    matrix operator+(int a);
+    matrix operator*(int a);
+    matrix operator-(int a);
+
     matrix& operator+=(int a);
     matrix& operator-=(int a);
     matrix& operator*=(int a);
+
     matrix operator++(int);
     matrix operator--(int);
+
     matrix& operator()(double d);
 
-    // Operatory porównania
-    bool operator==(const matrix& m) const;
-    bool operator>(const matrix& m) const;
-    bool operator<(const matrix& m) const;
+    /* ================== PORÓWNANIA ================== */
+    bool operator==(const matrix& m);
+    bool operator<(const matrix& m);
+    bool operator>(const matrix& m);
 
-    // Friend operatory
-    friend matrix operator+(const matrix& m1, const matrix& m2);
-    friend matrix operator*(const matrix& m1, const matrix& m2);
-    friend matrix operator+(const matrix& m, int a);
-    friend matrix operator+(int a, const matrix& m);
-    friend matrix operator*(const matrix& m, int a);
-    friend matrix operator*(int a, const matrix& m);
-    friend matrix operator-(const matrix& m, int a);
-    friend matrix operator-(int a, const matrix& m);
+    /* ================== FRIEND ================== */
+    friend matrix operator+(int a, matrix& m);
+    friend matrix operator*(int a, matrix& m);
+    friend matrix operator-(int a, matrix& m);
+
     friend std::ostream& operator<<(std::ostream& o, const matrix& m);
-
-    // Pomocnicze
-    void wstaw(int x, int y, int val) { at(x, y) = val; }
-    int getSize() const { return n; }
 };
+
 #endif
