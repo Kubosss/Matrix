@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Matrix: Dokumentacja pliku matrix.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Matrix<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Biblioteka do operacji na macierzach kwadratowych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku matrix.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementacja klasy matrix.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="matrix_8h_source.html">matrix.h</a>&quot;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+</div>
+<p><a href="matrix_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a3c40798bd1201151d4c8823a390a3236" id="r_a3c40798bd1201151d4c8823a390a3236"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c40798bd1201151d4c8823a390a3236">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="classmatrix.html">matrix</a> &amp;m)</td></tr>
+<tr class="memdesc:a3c40798bd1201151d4c8823a390a3236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator wyjścia - wypisuje macierz do strumienia.  <br /></td></tr>
+<tr class="separator:a3c40798bd1201151d4c8823a390a3236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7078264c4e5d3931a32d7461ca0c328" id="r_af7078264c4e5d3931a32d7461ca0c328"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7078264c4e5d3931a32d7461ca0c328">operator+</a> (const <a class="el" href="classmatrix.html">matrix</a> &amp;m1, const <a class="el" href="classmatrix.html">matrix</a> &amp;m2)</td></tr>
+<tr class="memdesc:af7078264c4e5d3931a32d7461ca0c328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje dwie macierze element po elemencie.  <br /></td></tr>
+<tr class="separator:af7078264c4e5d3931a32d7461ca0c328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4836cdbe09571297ef3899a75c108c78" id="r_a4836cdbe09571297ef3899a75c108c78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4836cdbe09571297ef3899a75c108c78">operator*</a> (const <a class="el" href="classmatrix.html">matrix</a> &amp;m1, const <a class="el" href="classmatrix.html">matrix</a> &amp;m2)</td></tr>
+<tr class="memdesc:a4836cdbe09571297ef3899a75c108c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykonuje mnożenie macierzowe.  <br /></td></tr>
+<tr class="separator:a4836cdbe09571297ef3899a75c108c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a8afd67e530138a627360ba872e439" id="r_ad7a8afd67e530138a627360ba872e439"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7a8afd67e530138a627360ba872e439">operator+</a> (const <a class="el" href="classmatrix.html">matrix</a> &amp;m, int a)</td></tr>
+<tr class="memdesc:ad7a8afd67e530138a627360ba872e439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje skalar do macierzy (macierz + liczba)  <br /></td></tr>
+<tr class="separator:ad7a8afd67e530138a627360ba872e439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01de94c30b288ec04f47e26d6e3face" id="r_ab01de94c30b288ec04f47e26d6e3face"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab01de94c30b288ec04f47e26d6e3face">operator+</a> (int a, const <a class="el" href="classmatrix.html">matrix</a> &amp;m)</td></tr>
+<tr class="memdesc:ab01de94c30b288ec04f47e26d6e3face"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje skalar do macierzy (liczba + macierz)  <br /></td></tr>
+<tr class="separator:ab01de94c30b288ec04f47e26d6e3face"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7784d835898caeec1d0f7468cd4f024b" id="r_a7784d835898caeec1d0f7468cd4f024b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7784d835898caeec1d0f7468cd4f024b">operator*</a> (const <a class="el" href="classmatrix.html">matrix</a> &amp;m, int a)</td></tr>
+<tr class="memdesc:a7784d835898caeec1d0f7468cd4f024b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mnoży macierz przez skalar (macierz * liczba)  <br /></td></tr>
+<tr class="separator:a7784d835898caeec1d0f7468cd4f024b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fdba8e65bf97bf4ea9b305d918b8637" id="r_a8fdba8e65bf97bf4ea9b305d918b8637"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fdba8e65bf97bf4ea9b305d918b8637">operator*</a> (int a, const <a class="el" href="classmatrix.html">matrix</a> &amp;m)</td></tr>
+<tr class="memdesc:a8fdba8e65bf97bf4ea9b305d918b8637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mnoży skalar przez macierz (liczba * macierz)  <br /></td></tr>
+<tr class="separator:a8fdba8e65bf97bf4ea9b305d918b8637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876562a27618e823ca9887172011013a" id="r_a876562a27618e823ca9887172011013a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876562a27618e823ca9887172011013a">operator-</a> (const <a class="el" href="classmatrix.html">matrix</a> &amp;m, int a)</td></tr>
+<tr class="memdesc:a876562a27618e823ca9887172011013a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odejmuje skalar od macierzy (macierz - liczba)  <br /></td></tr>
+<tr class="separator:a876562a27618e823ca9887172011013a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56b5ada6f33f54b1d72244086f2a39dc" id="r_a56b5ada6f33f54b1d72244086f2a39dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56b5ada6f33f54b1d72244086f2a39dc">operator-</a> (int a, const <a class="el" href="classmatrix.html">matrix</a> &amp;m)</td></tr>
+<tr class="memdesc:a56b5ada6f33f54b1d72244086f2a39dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odejmuje macierz od skalara (liczba - macierz)  <br /></td></tr>
+<tr class="separator:a56b5ada6f33f54b1d72244086f2a39dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Implementacja klasy matrix. </p>
+
+<p class="definition">Definicja w pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+</div><h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a7784d835898caeec1d0f7468cd4f024b" name="a7784d835898caeec1d0f7468cd4f024b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7784d835898caeec1d0f7468cd4f024b">&#9670;&#160;</a></span>operator*() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mnoży macierz przez skalar (macierz * liczba) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Macierz </td></tr>
+    <tr><td class="paramname">a</td><td>Mnożnik </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Nowa macierz z pomnożonymi elementami </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="matrix_8cpp_source.html#l00479">479</a> pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4836cdbe09571297ef3899a75c108c78" name="a4836cdbe09571297ef3899a75c108c78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4836cdbe09571297ef3899a75c108c78">&#9670;&#160;</a></span>operator*() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wykonuje mnożenie macierzowe. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m1</td><td>Pierwsza macierz </td></tr>
+    <tr><td class="paramname">m2</td><td>Druga macierz </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Nowa macierz będąca iloczynem macierzowym </dd></dl>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>Jeśli macierze mają różne rozmiary </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="matrix_8cpp_source.html#l00428">428</a> pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8fdba8e65bf97bf4ea9b305d918b8637" name="a8fdba8e65bf97bf4ea9b305d918b8637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fdba8e65bf97bf4ea9b305d918b8637">&#9670;&#160;</a></span>operator*() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mnoży skalar przez macierz (liczba * macierz) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Mnożnik </td></tr>
+    <tr><td class="paramname">m</td><td>Macierz </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Nowa macierz z pomnożonymi elementami </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="matrix_8cpp_source.html#l00493">493</a> pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad7a8afd67e530138a627360ba872e439" name="ad7a8afd67e530138a627360ba872e439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a8afd67e530138a627360ba872e439">&#9670;&#160;</a></span>operator+() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje skalar do macierzy (macierz + liczba) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Macierz </td></tr>
+    <tr><td class="paramname">a</td><td>Wartość do dodania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Nowa macierz z dodaną wartością do każdego elementu </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="matrix_8cpp_source.html#l00451">451</a> pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af7078264c4e5d3931a32d7461ca0c328" name="af7078264c4e5d3931a32d7461ca0c328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7078264c4e5d3931a32d7461ca0c328">&#9670;&#160;</a></span>operator+() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje dwie macierze element po elemencie. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m1</td><td>Pierwsza macierz </td></tr>
+    <tr><td class="paramname">m2</td><td>Druga macierz </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Nowa macierz będąca sumą </dd></dl>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>Jeśli macierze mają różne rozmiary </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="matrix_8cpp_source.html#l00410">410</a> pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab01de94c30b288ec04f47e26d6e3face" name="ab01de94c30b288ec04f47e26d6e3face"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab01de94c30b288ec04f47e26d6e3face">&#9670;&#160;</a></span>operator+() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje skalar do macierzy (liczba + macierz) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Wartość do dodania </td></tr>
+    <tr><td class="paramname">m</td><td>Macierz </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Nowa macierz z dodaną wartością do każdego elementu </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="matrix_8cpp_source.html#l00465">465</a> pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a876562a27618e823ca9887172011013a" name="a876562a27618e823ca9887172011013a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876562a27618e823ca9887172011013a">&#9670;&#160;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odejmuje skalar od macierzy (macierz - liczba) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Macierz </td></tr>
+    <tr><td class="paramname">a</td><td>Wartość do odjęcia </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Nowa macierz z odjętą wartością </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="matrix_8cpp_source.html#l00503">503</a> pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a56b5ada6f33f54b1d72244086f2a39dc" name="a56b5ada6f33f54b1d72244086f2a39dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56b5ada6f33f54b1d72244086f2a39dc">&#9670;&#160;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odejmuje macierz od skalara (liczba - macierz) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Wartość bazowa </td></tr>
+    <tr><td class="paramname">m</td><td>Macierz </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Nowa macierz gdzie każdy element = a - element_macierzy </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="matrix_8cpp_source.html#l00517">517</a> pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3c40798bd1201151d4c8823a390a3236" name="a3c40798bd1201151d4c8823a390a3236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c40798bd1201151d4c8823a390a3236">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmatrix.html">matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operator wyjścia - wypisuje macierz do strumienia. </p>
+<p>Każdy wiersz w osobnej linii, elementy oddzielone spacjami </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>Strumień wyjściowy </td></tr>
+    <tr><td class="paramname">m</td><td>Macierz do wypisania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Referencja do strumienia (umożliwia łańcuchowanie) </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="matrix_8cpp_source.html#l00135">135</a> pliku <a class="el" href="matrix_8cpp_source.html">matrix.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 13 sty 2026 09:27:20 dla Matrix za pomocą&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

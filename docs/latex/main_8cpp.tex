@@ -1,0 +1,62 @@
+\doxysection{Dokumentacja pliku main.\+cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Program testowy dla klasy matrix.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}matrix.\+h"{}}\newline
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Główna funkcja programu testowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Program testowy dla klasy matrix. 
+
+Program przeprowadza kompletny zestaw testów funkcjonalności klasy matrix, obejmujący konstruktory, operatory, metody transformacji i wypełniania. 
+
+Definicja w pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Główna funkcja programu testowego. 
+
+Przeprowadza 33 testy sprawdzające wszystkie funkcjonalności klasy matrix\+:
+\begin{DoxyItemize}
+\item Testy konstruktorów (domyślny, parametryczny, z tablicą, kopiujący)
+\item Testy metod dostępu (wstaw, pokaz, at)
+\item Testy transformacji (odwroc, losuj, szachownica)
+\item Testy wzorów (przekatna, pod\+\_\+przekatna, nad\+\_\+przekatna)
+\item Testy operacji diagonalnych (diagonalna, diagonalna\+\_\+k)
+\item Testy operacji kolumn i wierszy
+\item Testy operatorów arytmetycznych (+, -\/, \texorpdfstring{$\ast$}{*}, +=, -\/=, \texorpdfstring{$\ast$}{*}=)
+\item Testy operatorów inkrementacji/dekrementacji (++, --)
+\item Testy operatorów porównania (==, \texorpdfstring{$>$}{>}, \texorpdfstring{$<$}{<})
+\item Testy operatora wywołania ()
+\item Testy alokacji pamięci
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Zwraca}
+0 jeśli wszystkie testy zakończą się sukcesem, 1 w przypadku błędu 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{main_8cpp_source_l00032}{32}} pliku \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+Odwołuje się do \mbox{\hyperlink{matrix_8cpp_source_l00320}{matrix\+::alokuj()}}, \mbox{\hyperlink{matrix_8cpp_source_l00215}{matrix\+::diagonalna()}}, \mbox{\hyperlink{matrix_8cpp_source_l00228}{matrix\+::diagonalna\+\_\+k()}}, \mbox{\hyperlink{matrix_8cpp_source_l00247}{matrix\+::kolumna()}}, \mbox{\hyperlink{matrix_8cpp_source_l00087}{matrix\+::losuj()}}, \mbox{\hyperlink{matrix_8cpp_source_l00300}{matrix\+::nad\+\_\+przekatna()}}, \mbox{\hyperlink{matrix_8cpp_source_l00199}{matrix\+::odwroc()}}, \mbox{\hyperlink{matrix_8cpp_source_l00287}{matrix\+::pod\+\_\+przekatna()}}, \mbox{\hyperlink{matrix_8h_source_l00092}{matrix\+::pokaz()}}, \mbox{\hyperlink{matrix_8cpp_source_l00274}{matrix\+::przekatna()}}, \mbox{\hyperlink{matrix_8cpp_source_l00117}{matrix\+::szachownica()}}, \mbox{\hyperlink{matrix_8cpp_source_l00262}{matrix\+::wiersz()}} i \mbox{\hyperlink{matrix_8h_source_l00331}{matrix\+::wstaw()}}.
+
