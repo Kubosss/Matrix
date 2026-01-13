@@ -1,0 +1,269 @@
+\doxysection{Dokumentacja pliku matrix.\+cpp}
+\hypertarget{matrix_8cpp}{}\label{matrix_8cpp}\index{matrix.cpp@{matrix.cpp}}
+
+
+Implementacja klasy matrix.  
+
+
+{\ttfamily \#include "{}matrix.\+h"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{matrix_8cpp_a3c40798bd1201151d4c8823a390a3236}{operator$<$$<$}} (std\+::ostream \&o, const \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Operator wyjścia -\/ wypisuje macierz do strumienia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{matrix_8cpp_af7078264c4e5d3931a32d7461ca0c328}{operator+}} (const \mbox{\hyperlink{classmatrix}{matrix}} \&m1, const \mbox{\hyperlink{classmatrix}{matrix}} \&m2)
+\begin{DoxyCompactList}\small\item\em Dodaje dwie macierze element po elemencie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{matrix_8cpp_a4836cdbe09571297ef3899a75c108c78}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{classmatrix}{matrix}} \&m1, const \mbox{\hyperlink{classmatrix}{matrix}} \&m2)
+\begin{DoxyCompactList}\small\item\em Wykonuje mnożenie macierzowe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{matrix_8cpp_ad7a8afd67e530138a627360ba872e439}{operator+}} (const \mbox{\hyperlink{classmatrix}{matrix}} \&m, int a)
+\begin{DoxyCompactList}\small\item\em Dodaje skalar do macierzy (macierz + liczba) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{matrix_8cpp_ab01de94c30b288ec04f47e26d6e3face}{operator+}} (int a, const \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Dodaje skalar do macierzy (liczba + macierz) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{matrix_8cpp_a7784d835898caeec1d0f7468cd4f024b}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{classmatrix}{matrix}} \&m, int a)
+\begin{DoxyCompactList}\small\item\em Mnoży macierz przez skalar (macierz \texorpdfstring{$\ast$}{*} liczba) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{matrix_8cpp_a8fdba8e65bf97bf4ea9b305d918b8637}{operator\texorpdfstring{$\ast$}{*}}} (int a, const \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Mnoży skalar przez macierz (liczba \texorpdfstring{$\ast$}{*} macierz) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{matrix_8cpp_a876562a27618e823ca9887172011013a}{operator-\/}} (const \mbox{\hyperlink{classmatrix}{matrix}} \&m, int a)
+\begin{DoxyCompactList}\small\item\em Odejmuje skalar od macierzy (macierz -\/ liczba) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{matrix_8cpp_a56b5ada6f33f54b1d72244086f2a39dc}{operator-\/}} (int a, const \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Odejmuje macierz od skalara (liczba -\/ macierz) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Implementacja klasy matrix. 
+
+
+
+Definicja w pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{matrix_8cpp_a7784d835898caeec1d0f7468cd4f024b}\index{matrix.cpp@{matrix.cpp}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a7784d835898caeec1d0f7468cd4f024b} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{, }\item[{int}]{a}{}\end{DoxyParamCaption})}
+
+
+
+Mnoży macierz przez skalar (macierz \texorpdfstring{$\ast$}{*} liczba) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em m} & Macierz \\
+\hline
+{\em a} & Mnożnik \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowa macierz z pomnożonymi elementami 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{matrix_8cpp_source_l00479}{479}} pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_a4836cdbe09571297ef3899a75c108c78}\index{matrix.cpp@{matrix.cpp}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a4836cdbe09571297ef3899a75c108c78} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m1}{, }\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m2}{}\end{DoxyParamCaption})}
+
+
+
+Wykonuje mnożenie macierzowe. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em m1} & Pierwsza macierz \\
+\hline
+{\em m2} & Druga macierz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowa macierz będąca iloczynem macierzowym 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em std\+::logic\+\_\+error} & Jeśli macierze mają różne rozmiary \\
+\hline
+\end{DoxyExceptions}
+
+
+Definicja w linii \mbox{\hyperlink{matrix_8cpp_source_l00428}{428}} pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_a8fdba8e65bf97bf4ea9b305d918b8637}\index{matrix.cpp@{matrix.cpp}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a8fdba8e65bf97bf4ea9b305d918b8637} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Mnoży skalar przez macierz (liczba \texorpdfstring{$\ast$}{*} macierz) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em a} & Mnożnik \\
+\hline
+{\em m} & Macierz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowa macierz z pomnożonymi elementami 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{matrix_8cpp_source_l00493}{493}} pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_ad7a8afd67e530138a627360ba872e439}\index{matrix.cpp@{matrix.cpp}!operator+@{operator+}}
+\index{operator+@{operator+}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_ad7a8afd67e530138a627360ba872e439} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{, }\item[{int}]{a}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje skalar do macierzy (macierz + liczba) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em m} & Macierz \\
+\hline
+{\em a} & Wartość do dodania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowa macierz z dodaną wartością do każdego elementu 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{matrix_8cpp_source_l00451}{451}} pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_af7078264c4e5d3931a32d7461ca0c328}\index{matrix.cpp@{matrix.cpp}!operator+@{operator+}}
+\index{operator+@{operator+}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_af7078264c4e5d3931a32d7461ca0c328} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m1}{, }\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m2}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje dwie macierze element po elemencie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em m1} & Pierwsza macierz \\
+\hline
+{\em m2} & Druga macierz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowa macierz będąca sumą 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em std\+::logic\+\_\+error} & Jeśli macierze mają różne rozmiary \\
+\hline
+\end{DoxyExceptions}
+
+
+Definicja w linii \mbox{\hyperlink{matrix_8cpp_source_l00410}{410}} pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_ab01de94c30b288ec04f47e26d6e3face}\index{matrix.cpp@{matrix.cpp}!operator+@{operator+}}
+\index{operator+@{operator+}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_ab01de94c30b288ec04f47e26d6e3face} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator+ (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje skalar do macierzy (liczba + macierz) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em a} & Wartość do dodania \\
+\hline
+{\em m} & Macierz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowa macierz z dodaną wartością do każdego elementu 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{matrix_8cpp_source_l00465}{465}} pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_a876562a27618e823ca9887172011013a}\index{matrix.cpp@{matrix.cpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a876562a27618e823ca9887172011013a} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{, }\item[{int}]{a}{}\end{DoxyParamCaption})}
+
+
+
+Odejmuje skalar od macierzy (macierz -\/ liczba) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em m} & Macierz \\
+\hline
+{\em a} & Wartość do odjęcia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowa macierz z odjętą wartością 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{matrix_8cpp_source_l00503}{503}} pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_a56b5ada6f33f54b1d72244086f2a39dc}\index{matrix.cpp@{matrix.cpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a56b5ada6f33f54b1d72244086f2a39dc} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator-\/ (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Odejmuje macierz od skalara (liczba -\/ macierz) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em a} & Wartość bazowa \\
+\hline
+{\em m} & Macierz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowa macierz gdzie każdy element = a -\/ element\+\_\+macierzy 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{matrix_8cpp_source_l00517}{517}} pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_a3c40798bd1201151d4c8823a390a3236}\index{matrix.cpp@{matrix.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a3c40798bd1201151d4c8823a390a3236} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o}{, }\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Operator wyjścia -\/ wypisuje macierz do strumienia. 
+
+Każdy wiersz w osobnej linii, elementy oddzielone spacjami 
+\begin{DoxyParams}{Parametry}
+{\em o} & Strumień wyjściowy \\
+\hline
+{\em m} & Macierz do wypisania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Referencja do strumienia (umożliwia łańcuchowanie) 
+\end{DoxyReturn}
+
+
+Definicja w linii \mbox{\hyperlink{matrix_8cpp_source_l00135}{135}} pliku \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
